@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: white;
+}
+
+.calculator {
+  position: relative;
+  display: grid;
+  border: 2px solid white;
+  box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.05),
+    0 -15px 15px rgba(255, 255, 255, 0.05), 0 15px 15px rgba(0, 0, 0, 0.05),
+    0 15px 15px rgba(0, 0, 0, 0.05);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+/* style result box */
+.value {
+  grid-column: span 4;
+  height: 100px;
+  text-align: right;
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 20px;
+  color: #ff6f61;
+}
+
+/* style buttons */
+.calculator span {
+  display: grid;
+  width: 60px;
+  height: 60px;
+  color: black;
+  background: white;
+  place-items: center;
+  border: 1px solid white;
+  border-radius: 50%;
+  margin: 4px;
+  box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.05),
+    inset 0 -15px 15px rgba(255, 255, 255, 0.05),
+    0 15px 15px rgba(0, 0, 0, 0.05), inset 0 15px 15px rgba(0, 0, 0, 0.05);
+  font-size: 20px;
+}
+
+.calculator span:active {
+  background: white;
+  color: black;
+}
+
+.calculator span.clear {
+  grid-column: span 2;
+  width: 120px;
+  color: white;
+  background: #ff6f61;
+  box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.5),
+    inset 0 -15px 15px rgba(0, 0, 0, 0.05),
+    inset 0 15px 15px rgba(255, 255, 255, 0.05), 0 15px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid #ff6f61;
+  border-radius: 50px;
+}
+
+.calculator span.plus,
+.calculator span.minus,
+.calculator span.divide,
+.calculator span.multiply,
+.calculator span.mod,
+.calculator span.equal {
+  color: #ff6f61;
+}
